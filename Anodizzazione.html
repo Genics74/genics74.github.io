@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/style.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://cdn.jsdelivr.net/npm/markmap-toolbar@0.18.12/dist/index.js"></script><script>(r => {
+              setTimeout(r);
+            })(function renderToolbar() {
+  const {
+    markmap,
+    mm
+  } = window;
+  const {
+    el
+  } = markmap.Toolbar.create(mm);
+  el.setAttribute('style', 'position:absolute;bottom:20px;right:20px');
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"Anodizzazione","children":[{"content":"cose da comprare","children":[{"content":"alimentatore da laboratorio","children":[],"payload":{"tag":"li","lines":"2,3"}},{"content":"acqua demineralizzata","children":[],"payload":{"tag":"li","lines":"3,4"}},{"content":"soda caustica","children":[],"payload":{"tag":"li","lines":"4,5"}},{"content":"lastre piombo o alluminio","children":[],"payload":{"tag":"li","lines":"5,6"}},{"content":"acido solforico","children":[],"payload":{"tag":"li","lines":"6,7"}},{"content":"inchiostro stampante","children":[],"payload":{"tag":"li","lines":"7,8"}}],"payload":{"tag":"h2","lines":"1,2"}},{"content":"cose da preparare","children":[{"content":"modello 3d cornice per calcoli","children":[],"payload":{"tag":"h3","lines":"9,10"}},{"content":"calcolo densit&#xe0; corrente","children":[{"content":"Densit&#xe0; = spessore / (0,03 * minuti)","children":[],"payload":{"tag":"li","lines":"11,12"}}],"payload":{"tag":"h3","lines":"10,11"}},{"content":"soluzione acido solforico","children":[{"content":"170gr acido solforico + 1l acqua distillata","children":[],"payload":{"tag":"li","lines":"13,14"}}],"payload":{"tag":"h3","lines":"12,13"}},{"content":"soluzione soda caustica","children":[{"content":"acqua distillata 100ml + soda caustica 10 gr","children":[],"payload":{"tag":"li","lines":"15,16"}}],"payload":{"tag":"h3","lines":"14,15"}}],"payload":{"tag":"h2","lines":"8,9"}},{"content":"procedura","children":[{"content":"analisi del video","children":[{"content":"<a href=\"https://www.youtube.com/watch?v=qIP9kb_RPd4\">analisi video</a> su youtube","children":[],"payload":{"tag":"li","lines":"18,19"}}],"payload":{"tag":"h3","lines":"17,18"}},{"content":"pulizia del pezzo","children":[{"content":"in soluzione soda caustica (15 min)","children":[],"payload":{"tag":"li","lines":"20,21"}}],"payload":{"tag":"h3","lines":"19,20"}},{"content":"anodizzazione","children":[{"content":"in soluzione acido solforico (fino a 7 ore)","children":[],"payload":{"tag":"li","lines":"22,23"}},{"content":"temperatura soluzione &lt; 21 gradi C","children":[],"payload":{"tag":"li","lines":"23,24"}}],"payload":{"tag":"h3","lines":"21,22"}},{"content":"colorazione","children":[{"content":"bagno in colore 15 min.","children":[],"payload":{"tag":"li","lines":"25,26"}},{"content":"bagno in acqua bollente 30 min.","children":[],"payload":{"tag":"li","lines":"26,27"}}],"payload":{"tag":"h3","lines":"24,25"}}],"payload":{"tag":"h2","lines":"16,17"}},{"content":"info","children":[{"content":"spessori","children":[{"content":"25 micron per acqua salmastra","children":[],"payload":{"tag":"li","lines":"29,30"}}],"payload":{"tag":"h3","lines":"28,29"}},{"content":"condizioni tipiche","children":[{"content":"10-60 min (ma anche 7 ore) corrente 10-20 mA cm3 per spessori 5-35 um","children":[],"payload":{"tag":"li","lines":"31,32"}}],"payload":{"tag":"h3","lines":"30,31"}},{"content":"formula densit&#xe0;","children":[{"content":"spessore = 0,03 * temp (min) * densit&#xe0; corrente (mA/cm2)","children":[],"payload":{"tag":"li","lines":"33,34"}},{"content":"Densit&#xe0; = spessore / (0,03 * minuti)","children":[],"payload":{"tag":"li","lines":"34,35"}}],"payload":{"tag":"h3","lines":"32,33"}},{"content":"temperature di lavoro","children":[{"content":"soluzione sempre sotto 21 gradi","children":[],"payload":{"tag":"li","lines":"36,37"}}],"payload":{"tag":"h3","lines":"35,36"}}],"payload":{"tag":"h2","lines":"27,28"}}],"payload":{"tag":"h1","lines":"0,1"}},{})</script>
+</body>
+</html>
